@@ -3,7 +3,7 @@ const app = require('../app')
 const mongoose = require('mongoose')
 
 const mongodbUrl = 'mongodb://123.56.246.220/exam'
-const port = 30000
+const port = 3000
 
 mongoose.connect(mongodbUrl, {useNewUrlParser: true});
 
