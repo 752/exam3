@@ -11,6 +11,6 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', () => {
   app.listen(port, () => {
-    console.log('listen on 30000!')
+    console.log('listen on 3000!')
   })
 })

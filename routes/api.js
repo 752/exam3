@@ -14,6 +14,30 @@ router.get('/all', function(req, res) {
   })
   .catch(err => console.log(err))
 })
+
+router.post('/delete', function(req, res) {
+  const id = req.body._id
+  albumDao.deleteAlbum(id).then((data) =>{
+    console.log(data)
+    // const all = data.toObject()
+    // console.log(all)
+    res.json(data)
+    // res.end('all')
+  })
+  .catch(err => console.log(err))
+})
+
+router.post('/add', function(req, res) {
+  const album = req.body
+  albumDao.addAlbum(album).then((data) =>{
+    console.log(data)
+    // const all = data.toObject()
+    // console.log(all)
+    res.json(data)
+    // res.end('all')
+  })
+  .catch(err => console.log(err))
+})
 // router.post('/', function(req, res) {
 //   console.log('addBook')
 //   const book = req.body

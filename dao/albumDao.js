@@ -2,17 +2,17 @@ const mongoose = require('mongoose')
 
 const albumModel = mongoose.model('Album')
 
-// function addBook(book) {
-//   return albumModel.create(book)
-// }
+function addAlbum(album) {
+  return albumModel.create(album)
+}
 
 function findAll() {
   return albumModel.find({}).exec()
 }
 
-// function deleteBook(id) {
-//   return albumModel.findByIdAndRemove(id)
-// }
+function deleteAlbum(id) {
+  return albumModel.findByIdAndRemove(id)
+}
 
-module.exports = { findAll }
+module.exports = { findAll, deleteAlbum, addAlbum }
 // module.exports = { addBook, findAll, deleteBook }
